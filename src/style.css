@@ -90,7 +90,7 @@ body{
 }
 
 .screenshot{
-    width: 400px;
+    width: 100%;
     display: flex;
     align-items: center;
     font-size: 24px;
@@ -178,4 +178,12 @@ body{
 
 .end{
     align-self: end;
+}
+
+@media (max-width: 1024px){
+    .work{
+        display: flex;
+        width: 40%;
+        flex-wrap: wrap;
+    }
 }
