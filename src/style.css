@@ -6,8 +6,22 @@ body{
     justify-content: center;
     margin: 0;
     padding: 0;
-    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
+    contain: content;
+}
+
+button{
+    text-decoration: none;
+    outline: none;
+    background: none;
+    border: none;
+    width: 60px;
+    height: 60px;
+}
+
+button:hover{
+    background-color: rgb(227, 255, 208);
 }
 
 /* div{
@@ -15,7 +29,7 @@ body{
 } */
 
 .image{
-    width: 30%;
+    width: 40%;
     object-fit: fill;
     box-shadow: 2px 2px 10px 1px rgba(84, 84, 84, 0.761);    
     z-index: 2;
@@ -40,8 +54,9 @@ body{
 #body,
 #footer{
     display: flex;
-    width: 100%;
+    max-width: 100%;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 #intro-content{
@@ -86,6 +101,7 @@ body{
 .work{
     display: flex;
     flex-direction: column;
+    width: 30%;
     box-shadow: 2px 2px 10px 1px rgba(84, 84, 84, 0.761);  
 }
 
@@ -119,10 +135,13 @@ body{
 
 .header{
     font-size: 48px;
+    margin: 0;
+    font-weight: 600;
 }
 
 .txt{
     font-size: 28px;
+    align-items: center;
 }
 
 .description-heading{
@@ -130,6 +149,13 @@ body{
     justify-content: space-between;
     font-size: 24px;
     align-items: center;
+    margin: 0;
+}
+
+.small-header{
+    font-size: 24px;
+    margin: 0;
+    font-weight: 500;
 }
 
 .description{
@@ -139,11 +165,16 @@ body{
 
 .icons{
     display: flex;
-    gap: 10px;
+    gap: 5px;
+}
+
+.txt-icon{
+    width: 30px;
 }
 
 .icon{
-    width: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .description-box{
@@ -162,10 +193,11 @@ body{
     /* clip-path: polygon(0 0, 100% 0, 100% 62%, 0% 100%); */
     transform: rotate(-8deg);
     box-shadow: 2px 2px 10px rgb(132, 132, 132);
+    overflow-x: hidden;
 }
 
 .big-icon{
-    width: 40px;
+    width: 50px;
 }
 
 .intro-box{
@@ -178,4 +210,84 @@ body{
 
 .end{
     align-self: end;
+}
+
+@media (max-width: 1024px){
+    .work{
+        display: flex;
+        width: 40%;
+        flex-wrap: wrap;
+    }
+    
+    .headshot{
+        height: 350px;
+        width: 350px;
+    }
+
+    .txt{
+        font-size: 18px;
+    }
+
+    .image{
+        width: 60%;
+    }
+
+    .text{
+        height: auto;
+    }
+
+    .backdrop{
+        top: -200px;
+    }
+}
+
+@media (max-width: 430px){
+    #intro-content{
+        flex-direction: column;
+    }
+    .header{
+        font-size: 36px;
+    }
+    .txt{
+        font-size: 12px;
+    }
+
+    .headshot{
+        width: 250px;
+        height: 250px;
+        margin: 0;
+    }
+
+    .work{
+        width: 100%;
+    }
+
+    #footer-content{
+        flex-direction: column;
+    }
+
+    .image{
+        width: 100%;
+    }
+
+    .txt-icon{
+        width: 20px;
+    }
+
+    .big-icon{
+        width: 40px;
+        height: 40px;
+    }
+
+    .backdrop{
+        width: 130%;
+    }
+
+    .intro-box{
+        gap: 5px;
+    }
+
+    .text-box{
+        gap: 0;
+    }
 }
