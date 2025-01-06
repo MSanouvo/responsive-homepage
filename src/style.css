@@ -106,7 +106,7 @@ button:hover{
 }
 
 .screenshot{
-    width: 400px;
+    width: 100%;
     display: flex;
     align-items: center;
     font-size: 24px;
@@ -215,7 +215,7 @@ button:hover{
 @media (max-width: 1024px){
     .work{
         display: flex;
-        width: 40%;
+        width: 45%;
         flex-wrap: wrap;
     }
     
